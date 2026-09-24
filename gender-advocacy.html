@@ -1,0 +1,2545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Gender Advocacy | Shining Communities CBO</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo/logo new cbo_page.jpg">
+</head>
+<style>
+/* ==========================================
+   GENDER ADVOCACY HERO
+========================================== */
+.gender-advocacy-hero {
+    position: relative;
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--dark);
+}
+/* BACKGROUND IMAGE */
+.gender-advocacy-hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background-image: url("image/8d6ea1eae4e6d4b507835ca942269ee3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(1.02);
+}
+/* OVERLAY */
+.gender-advocacy-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(36, 52, 71, 0.96) 0%,
+            rgba(36, 52, 71, 0.86) 38%,
+            rgba(21, 85, 140, 0.58) 72%,
+            rgba(21, 85, 140, 0.35) 100%
+        );
+}
+/* SUBTLE COLOUR ACCENT */
+.gender-advocacy-hero::after {
+    content: "";
+    position: absolute;
+    right: -180px;
+    bottom: -220px;
+    width: 560px;
+    height: 560px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    z-index: -1;
+}
+/* CONTAINER */
+.gender-advocacy-hero-container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 120px 7% 105px;
+}
+/* CONTENT */
+.gender-advocacy-hero-content {
+    width: 100%;
+    max-width: 760px;
+}
+/* BREADCRUMB */
+.gender-advocacy-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+}
+.gender-advocacy-breadcrumb a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.gender-advocacy-breadcrumb a:hover {
+    color: var(--secondary);
+}
+.gender-advocacy-breadcrumb i {
+    color: var(--secondary);
+    font-size: 17px;
+}
+.gender-advocacy-breadcrumb span {
+    color: rgba(255, 255, 255, 0.904);
+}
+/* LABEL */
+.gender-advocacy-hero-label {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.gender-advocacy-hero-label::before {
+    content: "";
+    width: 15px;
+    height: 2px;
+    background: var(--secondary);
+}
+/* HEADING */
+.gender-advocacy-hero-content h1 {
+    margin: 0 0 25px;
+    color: var(--white);
+    font-size: clamp(42px, 5vw, 57px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+/* INTRODUCTION */
+.gender-advocacy-hero-content p {
+    max-width: 680px;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.9;
+}
+/* ACTIONS */
+.gender-advocacy-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 36px;
+}
+.gender-advocacy-primary-btn,
+.gender-advocacy-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    min-height: 54px;
+    padding: 15px 25px;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+.gender-advocacy-primary-btn {
+    background: var(--secondary);
+    color: var(--white);
+}
+.gender-advocacy-primary-btn:hover {
+    background: var(--secondary-dark);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+.gender-advocacy-secondary-btn {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: transparent;
+    color: var(--white);
+}
+.gender-advocacy-secondary-btn:hover {
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+/* SCROLL INDICATOR */
+.gender-advocacy-scroll-indicator {
+    position: absolute;
+    right: 7%;
+    bottom: 35px;
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    writing-mode: horizontal-tb;
+    transition: color 0.3s ease;
+}
+.gender-advocacy-scroll-indicator i {
+    font-size: 22px;
+    color: var(--white);
+    animation: genderHeroArrowBounce 1.8s infinite;
+}
+.gender-advocacy-scroll-indicator:hover {
+    color: var(--white);
+}
+@keyframes genderHeroArrowBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+@media (max-width: 1200px) {
+    .gender-advocacy-hero {
+        min-height: 640px;
+    }
+    .gender-advocacy-hero-container {
+        padding: 110px 6% 95px;
+    }
+    .gender-advocacy-hero-content {
+        max-width: 700px;
+    }
+}
+@media (max-width: 992px) {
+    .gender-advocacy-hero {
+        min-height: 610px;
+    }
+    .gender-advocacy-hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(36, 52, 71, 0.95),
+                rgba(21, 85, 140, 0.70)
+            );
+    }
+    .gender-advocacy-hero-container {
+        padding: 105px 5% 90px;
+    }
+    .gender-advocacy-hero-content h1 {
+        font-size: 56px;
+    }
+    .gender-advocacy-scroll-indicator {
+        right: 5%;
+    }
+}
+@media (max-width: 768px) {
+    .gender-advocacy-hero {
+        min-height: 590px;
+    }
+    .gender-advocacy-hero-background {
+        background-position: 60% center;
+    }
+    .gender-advocacy-hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(36, 52, 71, 0.96),
+                rgba(36, 52, 71, 0.78)
+            );
+    }
+    .gender-advocacy-hero-container {
+        padding: 100px 5% 85px;
+    }
+    .gender-advocacy-breadcrumb {
+        margin-bottom: 25px;
+    }
+    .gender-advocacy-hero-label {
+        margin-bottom: 17px;
+    }
+    .gender-advocacy-hero-content h1 {
+        font-size: 46px;
+        letter-spacing: -0.8px;
+    }
+    .gender-advocacy-hero-content p {
+        font-size: 16px;
+        line-height: 1.85;
+    }
+    .gender-advocacy-scroll-indicator {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .gender-advocacy-hero {
+        min-height: 560px;
+    }
+    .gender-advocacy-hero-container {
+        padding: 90px 5% 75px;
+    }
+    .gender-advocacy-breadcrumb {
+        gap: 8px;
+        font-size: 16px;
+    }
+    .gender-advocacy-hero-label {
+        font-size: 16px;
+        letter-spacing: 1.8px;
+    }
+    .gender-advocacy-hero-label::before {
+        width: 15px;
+    }
+    .gender-advocacy-hero-content h1 {
+        font-size: 38px;
+        line-height: 1.12;
+    }
+    .gender-advocacy-hero-content p {
+        font-size: 16px;
+    }
+    .gender-advocacy-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+        max-width: 340px;
+    }
+    .gender-advocacy-primary-btn,
+    .gender-advocacy-secondary-btn {
+        width: 100%;
+        min-height: 51px;
+    }
+}
+@media (max-width: 380px) {
+    .gender-advocacy-hero-content h1 {
+        font-size: 33px;
+    }
+    .gender-advocacy-hero-container {
+        padding-top: 80px;
+    }
+
+}
+/* ==========================================
+   GENDER PILLAR INFORMATION
+========================================== */
+.gender-pillar-information {
+    position: relative;
+    padding: 100px 5%;
+    background: var(--white);
+    overflow: hidden;
+}
+.gender-pillar-container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+/* SECTION HEADING */
+.gender-pillar-section-heading {
+    max-width: 760px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+.gender-pillar-label,
+.gender-content-label {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.gender-pillar-section-heading h2 {
+    margin: 0 0 22px;
+    color: var(--dark);
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+.gender-pillar-section-heading h2 span,
+.gender-research-heading h3 span {
+    color: var(--primary);
+}
+.gender-pillar-section-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.9;
+}
+/* TWO COLUMN LAYOUT */
+.gender-pillar-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 65px;
+    align-items: start;
+}
+/* ==========================================
+   LEFT COLUMN
+========================================== */
+.gender-pillar-overview {
+    min-width: 0;
+}
+.gender-pillar-overview-image {
+    width: 100%;
+    height: 330px;
+    margin-bottom: 32px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+.gender-pillar-overview-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.gender-pillar-overview-image:hover img {
+    transform: scale(1.04);
+}
+.gender-pillar-overview h3 {
+    max-width: 620px;
+    margin: 0 0 23px;
+    color: var(--dark);
+    font-size: clamp(27px, 3vw, 32px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+.gender-pillar-overview > p {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.95;
+}
+/* INFORMATION BLOCKS */
+.gender-information-block {
+    padding: 27px 0;
+    border-top: 1px solid var(--border);
+}
+.gender-information-block:last-child {
+    border-bottom: 1px solid var(--border);
+}
+.gender-information-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 15px;
+}
+.gender-information-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: rgba(36, 116, 185, 0.10);
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 500;
+}
+.gender-information-heading h4 {
+    margin: 0;
+    color: var(--dark);
+    font-size: 22px;
+    font-weight: 800;
+}
+.gender-information-block p {
+    margin: 0 0 13px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.9;
+}
+.gender-information-block p:last-child {
+    margin-bottom: 0;
+}
+/* FOCUS LIST */
+.gender-focus-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gender-focus-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.6;
+}
+.gender-focus-list li i {
+    margin-top: 4px;
+    color: var(--secondary);
+    font-size: 17px;
+}
+/* ==========================================
+   RIGHT COLUMN: RESEARCH LIBRARY
+========================================== */
+.gender-research-library {
+    min-width: 0;
+    padding: 35px;
+    border-radius: 7px;
+    background: var(--light);
+}
+.gender-research-heading h3 {
+    margin: 0 0 18px;
+    color: var(--dark);
+    font-size: clamp(27px, 3vw, 38px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+.gender-research-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.85;
+}
+/* FILTERS */
+.gender-research-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 30px 0 25px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+.gender-filter-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 4px;
+    background: var(--white);
+    color: var(--muted);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+.gender-filter-button i {
+    font-size: 16px;
+}
+.gender-filter-button:hover,
+.gender-filter-button.active {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: var(--white);
+}
+/* DOCUMENT LIST */
+.gender-document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+/* DOCUMENT CARD */
+.gender-document-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 20px;
+    border-radius: 5px;
+    background: var(--white);
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.gender-document-card:hover {
+    border-color: rgba(36, 116, 185, 0.45);
+    box-shadow: 0 12px 30px rgba(36, 52, 71, 0.07);
+    transform: translateY(-3px);
+}
+/* PDF ICON */
+.gender-document-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: rgba(229, 45, 59, 0.10);
+    color: var(--secondary);
+    font-size: 24px;
+}
+/* DOCUMENT DETAILS */
+.gender-document-details {
+    min-width: 0;
+    flex: 1;
+}
+.gender-document-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 9px;
+}
+.gender-document-category {
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.gender-document-format {
+    padding: 4px 7px;
+    border-radius: 3px;
+    background: var(--light);
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 500;
+}
+.gender-document-details h4 {
+    margin: 0 0 10px;
+    color: var(--dark);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+.gender-document-details p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.7;
+}
+/* DOCUMENT ACTIONS */
+.gender-document-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 17px;
+}
+.gender-view-document,
+.gender-download-document {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 35px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+.gender-view-document {
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: var(--white);
+}
+.gender-view-document:hover {
+    border-color: var(--primary-dark);
+    background: var(--primary-dark);
+    color: var(--white);
+}
+.gender-download-document {
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--dark);
+}
+.gender-download-document:hover {
+    border-color: var(--secondary);
+    background: var(--secondary);
+    color: var(--white);
+}
+/* EMPTY STATE */
+.gender-research-empty {
+    padding: 35px 15px;
+    text-align: center;
+    color: var(--muted);
+}
+.gender-research-empty i {
+    margin-bottom: 12px;
+    color: var(--secondary);
+    font-size: 30px;
+}
+.gender-research-empty p {
+    margin: 0;
+    font-size: 17px;
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+@media (max-width: 1200px) {
+    .gender-pillar-information {
+        padding: 95px 5%;
+    }
+    .gender-pillar-layout {
+        gap: 40px;
+    }
+    .gender-research-library {
+        padding: 28px;
+    }
+}
+@media (max-width: 992px) {
+    .gender-pillar-information {
+        padding: 85px 5%;
+    }
+    .gender-pillar-section-heading {
+        margin-bottom: 50px;
+    }
+    .gender-pillar-layout {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+    .gender-pillar-overview-image {
+        height: 380px;
+    }
+    .gender-research-library {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .gender-pillar-information {
+        padding: 75px 5%;
+    }
+    .gender-pillar-section-heading h2 {
+        font-size: 34px;
+    }
+    .gender-pillar-section-heading p {
+        font-size: 14px;
+    }
+    .gender-pillar-overview h3 {
+        font-size: 30px;
+    }
+    .gender-pillar-overview-image {
+        height: 320px;
+    }
+    .gender-research-library {
+        padding: 25px;
+    }
+    .gender-research-heading h3 {
+        font-size: 30px;
+    }
+    .gender-document-card {
+        padding: 17px;
+    }
+}
+@media (max-width: 600px) {
+    .gender-pillar-information {
+        padding: 65px 5%;
+    }
+    .gender-pillar-section-heading {
+        margin-bottom: 38px;
+    }
+    .gender-pillar-section-heading h2 {
+        font-size: 29px;
+    }
+    .gender-pillar-section-heading p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .gender-pillar-overview-image {
+        height: 245px;
+        margin-bottom: 25px;
+    }
+    .gender-pillar-overview h3 {
+        font-size: 27px;
+    }
+    .gender-pillar-overview > p {
+        font-size: 16px;
+    }
+    .gender-information-heading h4 {
+        font-size: 17px;
+    }
+    .gender-focus-list {
+        grid-template-columns: 1fr;
+    }
+    .gender-research-library {
+        padding: 20px;
+    }
+    .gender-research-heading h3 {
+        font-size: 27px;
+    }
+    .gender-research-filters {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .gender-filter-button {
+        width: 100%;
+    }
+    .gender-document-card {
+        gap: 12px;
+        padding: 15px;
+    }
+    .gender-document-icon {
+        width: 40px;
+        height: 48px;
+        font-size: 20px;
+    }
+    .gender-document-details h4 {
+        font-size: 17px;
+    }
+    .gender-document-details p {
+        font-size: 16px;
+    }
+    .gender-document-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .gender-view-document,
+    .gender-download-document {
+        width: 100%;
+    }
+}
+@media (max-width: 380px) {
+    .gender-pillar-section-heading h2 {
+        font-size: 26px;
+    }
+    .gender-pillar-overview h3 {
+        font-size: 24px;
+    }
+    .gender-research-heading h3 {
+        font-size: 24px;
+    }
+}
+/* ==========================================
+   GENDER ADVOCACY PARTNERSHIP CTA
+========================================== */
+.gender-partnership-cta {
+    position: relative;
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 5%;
+    isolation: isolate;
+    overflow: hidden;
+}
+/* BACKGROUND IMAGE */
+.gender-partnership-background {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background-image: url("image/8d6ea1eae4e6d4b507835ca942269ee3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* OVERLAY */
+.gender-partnership-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(21, 85, 140, 0.96),
+            rgba(36, 52, 71, 0.596)
+        );
+}
+/* DECORATIVE CIRCLE */
+.gender-partnership-cta::before {
+    content: "";
+    position: absolute;
+    top: -240px;
+    right: -180px;
+    width: 560px;
+    height: 560px;
+    border: 1px solid rgba(255, 255, 255, 0.445);
+    border-radius: 50%;
+    z-index: -1;
+}
+.gender-partnership-cta::after {
+    content: "";
+    position: absolute;
+    bottom: -280px;
+    left: -220px;
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgba(229, 45, 60, 0.473);
+    border-radius: 50%;
+    z-index: -1;
+}
+/* CONTAINER */
+.gender-partnership-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+/* MAIN CONTENT */
+.gender-partnership-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+.gender-partnership-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.gender-partnership-content h2 {
+    margin: 0 0 24px;
+    color: var(--white);
+    font-size: clamp(34px, 4.5vw, 42px);
+    font-weight: 800;
+    line-height: 1.18;
+}
+.gender-partnership-content h2 span {
+    color: var(--secondary);
+}
+.gender-partnership-content > p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    line-height: 1.95;
+}
+/* BUTTONS */
+.gender-partnership-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 35px;
+}
+.gender-partnership-primary-btn,
+.gender-partnership-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 53px;
+    padding: 14px 25px;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+.gender-partnership-primary-btn {
+    background: var(--secondary);
+    color: var(--white);
+}
+.gender-partnership-primary-btn:hover {
+    background: var(--secondary-dark);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+.gender-partnership-secondary-btn {
+    border: 1px solid rgba(255, 255, 255, 0.644);
+    background: transparent;
+    color: var(--white);
+}
+.gender-partnership-secondary-btn:hover {
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+/* ==========================================
+   PARTNERSHIP OPPORTUNITIES
+========================================== */
+.gender-partnership-opportunities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 65px;
+}
+.gender-opportunity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 25px 22px;
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+.gender-opportunity-item:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgb(255, 255, 255);
+    transform: translateY(-4px);
+}
+/* ICON */
+.gender-opportunity-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #e52d3cad;
+    color: var(--white);
+    font-size: 20px;
+}
+.gender-opportunity-item h4 {
+    margin: 0 0 9px;
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 500;
+}
+.gender-opportunity-item p {
+    margin: 0;
+    color: rgba(94, 94, 94, 0.7);
+    font-size: 16px;
+    line-height: 1.75;
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+@media (max-width: 1200px) {
+    .gender-partnership-cta {
+        padding: 95px 5%;
+    }
+    .gender-partnership-opportunities {
+        gap: 14px;
+    }
+    .gender-opportunity-item {
+        padding: 22px 18px;
+    }
+}
+@media (max-width: 992px) {
+    .gender-partnership-cta {
+        padding: 90px 5%;
+    }
+    .gender-partnership-background {
+        background-attachment: scroll;
+    }
+    .gender-partnership-opportunities {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .gender-opportunity-item {
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+    .gender-partnership-cta {
+        min-height: auto;
+        padding: 80px 5%;
+    }
+    .gender-partnership-content h2 {
+        font-size: 38px;
+    }
+    .gender-partnership-content > p {
+        font-size: 16px;
+        line-height: 1.85;
+    }
+    .gender-partnership-opportunities {
+        margin-top: 48px;
+    }
+}
+@media (max-width: 600px) {
+    .gender-partnership-cta {
+        padding: 70px 5%;
+    }
+    .gender-partnership-content h2 {
+        font-size: 31px;
+        letter-spacing: -0.5px;
+    }
+    .gender-partnership-content > p {
+        font-size: 16px;
+    }
+    .gender-partnership-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 340px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .gender-partnership-primary-btn,
+    .gender-partnership-secondary-btn {
+        width: 100%;
+    }
+    .gender-partnership-opportunities {
+        gap: 12px;
+        margin-top: 40px;
+    }
+    .gender-opportunity-item {
+        padding: 20px;
+    }
+    .gender-opportunity-item h4 {
+        font-size: 17px;
+    }
+    .gender-opportunity-item p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 380px) {
+    .gender-partnership-content h2 {
+        font-size: 28px;
+    }
+}
+</style>
+<body>
+    <!--scrollbutton-->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!-- ==========================================
+     TOP BAR
+    ========================================== -->
+    <div class="top-bar" id="top-bar">
+        <div class="container top-content">
+
+            <div class="top-left">
+                <span>
+                    <i class="fas fa-bullhorn"></i>
+                    The Advocacy Network for Development
+                </span>
+
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    info@shiningcommunities.org
+                </span>
+            </div>
+
+            <div class="top-right">
+                <a href="#" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- ==========================================
+     MAIN HEADER
+    ========================================== -->
+    <header class="main-header" id="main-header">
+        <!-- LOGO AREA -->
+        <div class="logo-section">
+            <a href="index.html" class="logo">
+                <img src="logo/logo new cbo_page.jpg" alt="Shining Communities CBO">
+            </a>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <!-- PROGRAMS DROPDOWN -->
+                <li class="dropdown">
+                    <div class="dropdown-header">
+                        <a href="programs.html" class="explore-link">Our Pillars</a>
+                        <button class="dropdown-toggle" type="button" aria-label="Toggle Programs menu" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="gender-advocacy.html">Gender Advocacy</a></li>
+                        <li><a href="children-youth-advocacy.html">Children & Youth Advocacy</a></li>
+                        <li><a href="water-environment-advocacy.html">Water Rights & Environment Advocacy</a></li>
+                        <li><a href="global-trade-advocacy.html">Global Trade Advocacy</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- HEADER ACTIONS -->
+            <div class="header-actions">
+                <a href="partnership.html" class="partnership-btn">Get Involved<i class="fas fa-arrow-right"></i></a>
+                <button class="header-search-btn" type="button" aria-label="Search website">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button class="menu-btn" id="menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+    <!-- ==========================================
+     GENDER ADVOCACY HERO
+    ========================================== -->
+    <section class="gender-advocacy-hero">
+
+        <div class="gender-advocacy-hero-background"></div>
+
+        <div class="gender-advocacy-hero-overlay"></div>
+
+        <div class="gender-advocacy-hero-container">
+
+            <div class="gender-advocacy-hero-content"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <!-- BREADCRUMB -->
+                <div class="gender-advocacy-breadcrumb">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <i class="fas fa-angle-right"></i>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <i class="fas fa-angle-right"></i>
+
+                    <span>Gender Advocacy</span>
+
+                </div>
+
+                <!-- LABEL -->
+                <span class="gender-advocacy-hero-label">
+                    Our Advocacy Pillars
+                </span>
+
+                <!-- HEADING -->
+                <h1>
+                    Gender Advocacy
+                </h1>
+
+                <!-- INTRODUCTION -->
+                <p>
+                    Advancing gender equality, strengthening women's participation,
+                    and supporting communities in addressing barriers that limit
+                    dignity, opportunity, leadership, and inclusive development.
+                </p>
+
+                <!-- ACTIONS -->
+                <div class="gender-advocacy-hero-actions">
+
+                    <a href="#gender-research"
+                    class="gender-advocacy-primary-btn">
+
+                        Explore Our Research
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                    <a href="#gender-overview"
+                    class="gender-advocacy-secondary-btn">
+
+                        Discover Our Focus
+
+                        <i class="fas fa-angle-down"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SCROLL INDICATOR -->
+        <a href="#gender-overview"
+        class="gender-advocacy-scroll-indicator"
+        aria-label="Scroll to Gender Advocacy overview">
+
+            <span>Scroll to explore</span>
+
+            <i class="fas fa-arrow-down"></i>
+
+        </a>
+
+    </section>
+    <!-- ==========================================
+     GENDER ADVOCACY INFORMATION + RESEARCH
+    ========================================== -->
+    <section class="gender-pillar-information" id="gender-overview">
+
+        <div class="gender-pillar-container">
+
+            <!-- SECTION INTRODUCTION -->
+            <div class="gender-pillar-section-heading"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <span class="gender-pillar-label">
+                    Understanding Our Work
+                </span>
+
+                <h2>
+                    Advancing Gender Equality Through
+                    <span>Knowledge and Action</span>
+                </h2>
+
+                <p>
+                    Explore our focus on gender advocacy, the issues affecting
+                    communities, and the knowledge resources that support
+                    meaningful dialogue and action.
+                </p>
+
+            </div>
+
+            <!-- TWO COLUMN LAYOUT -->
+            <div class="gender-pillar-layout">
+
+                <!-- ==================================
+                    LEFT COLUMN: PILLAR INFORMATION
+                ================================== -->
+
+                <div class="gender-pillar-overview"
+                    data-aos="fade-right"
+                    data-aos-duration="1000">
+
+                    <div class="gender-pillar-overview-image">
+
+                        <img src="image/8d6ea1eae4e6d4b507835ca942269ee3.jpg"
+                            alt="Gender advocacy and community participation">
+
+                    </div>
+
+                    <span class="gender-content-label">
+                        Gender Advocacy
+                    </span>
+
+                    <h3>
+                        Creating Space for Equal
+                        Participation and Opportunity
+                    </h3>
+
+                    <p>
+                        Gender advocacy is an important part of building inclusive
+                        communities where women, girls, men, and boys can
+                        participate meaningfully in social, economic, and
+                        community development processes.
+                    </p>
+
+                    <p>
+                        Our work seeks to generate awareness, encourage dialogue,
+                        identify gaps, and support action around gender-related
+                        challenges that contribute to marginalisation and unequal
+                        opportunities.
+                    </p>
+
+                    <!-- INTRODUCTION -->
+                    <div class="gender-information-block">
+
+                        <div class="gender-information-heading">
+
+                            <span class="gender-information-number">
+                                01
+                            </span>
+
+                            <h4>Introduction</h4>
+
+                        </div>
+
+                        <p>
+                            We focus on understanding gender-related challenges
+                            within communities and creating platforms where
+                            experiences, concerns, and recommendations can be
+                            shared with relevant actors.
+                        </p>
+
+                    </div>
+
+                    <!-- MAIN FOCUS AREAS -->
+                    <div class="gender-information-block">
+
+                        <div class="gender-information-heading">
+
+                            <span class="gender-information-number">
+                                02
+                            </span>
+
+                            <h4>Main Focus Areas</h4>
+
+                        </div>
+
+                        <ul class="gender-focus-list">
+
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Women and leadership
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Economic empowerment
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Gender-based violence
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Equal participation in decision-making
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check"></i>
+                                Awareness of gender rights and opportunities
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <!-- KEY ISSUES -->
+                    <div class="gender-information-block">
+
+                        <div class="gender-information-heading">
+
+                            <span class="gender-information-number">
+                                03
+                            </span>
+
+                            <h4>Key Issues</h4>
+
+                        </div>
+
+                        <p>
+                            Gender inequality can be reinforced by limited access
+                            to leadership opportunities, economic resources,
+                            information, representation, and safe participation
+                            in community life.
+                        </p>
+
+                        <p>
+                            Our advocacy approach examines these challenges and
+                            promotes informed discussion around practical responses.
+                        </p>
+
+                    </div>
+
+                    <!-- ADVOCACY APPROACH -->
+                    <div class="gender-information-block">
+
+                        <div class="gender-information-heading">
+
+                            <span class="gender-information-number">
+                                04
+                            </span>
+
+                            <h4>Our Advocacy Approach</h4>
+
+                        </div>
+
+                        <p>
+                            We review current trends, identify gaps and challenges,
+                            generate knowledge, create awareness, and identify
+                            platforms where meaningful action can take place.
+                        </p>
+
+                        <p>
+                            Information may be developed into research papers,
+                            newsletters, posters, publications, seminars,
+                            workshops, meetings, and conferences.
+                        </p>
+
+                    </div>
+
+                    <!-- COMMUNITY IMPACT -->
+                    <div class="gender-information-block">
+
+                        <div class="gender-information-heading">
+
+                            <span class="gender-information-number">
+                                05
+                            </span>
+
+                            <h4>Community Impact</h4>
+
+                        </div>
+
+                        <p>
+                            Through awareness and community participation, gender
+                            advocacy can help strengthen representation, encourage
+                            dialogue, and support more inclusive development
+                            processes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ==================================
+                    RIGHT COLUMN: RESEARCH LIBRARY
+                ================================== -->
+
+                <div class="gender-research-library"
+                    id="gender-research"
+                    data-aos="fade-left"
+                    data-aos-duration="1000">
+
+                    <div class="gender-research-heading">
+
+                        <span class="gender-content-label">
+                            Knowledge Centre
+                        </span>
+
+                        <h3>
+                            Research Papers &
+                            <span>Publications</span>
+                        </h3>
+
+                        <p>
+                            Explore research papers, policy briefs, reports, and
+                            publications related to gender advocacy and inclusive
+                            community development.
+                        </p>
+
+                    </div>
+
+                    <!-- DOCUMENT FILTERS -->
+                    <div class="gender-research-filters">
+
+                        <button class="gender-filter-button active"
+                                type="button"
+                                data-filter="all">
+                            <i class="fas fa-layer-group"></i>
+                            All Resources
+                        </button>
+
+                        <button class="gender-filter-button"
+                                type="button"
+                                data-filter="research">
+                            <i class="fas fa-file-lines"></i>
+                            Research
+                        </button>
+
+                        <button class="gender-filter-button"
+                                type="button"
+                                data-filter="policy">
+                            <i class="fas fa-scale-balanced"></i>
+                            Policy Briefs
+                        </button>
+
+                        <button class="gender-filter-button"
+                                type="button"
+                                data-filter="reports">
+                            <i class="fas fa-chart-column"></i>
+                            Reports
+                        </button>
+
+                    </div>
+
+                    <!-- DOCUMENT LIST -->
+                    <div class="gender-document-list">
+
+                        <!-- DOCUMENT 1 -->
+                        <article class="gender-document-card"
+                                data-category="research">
+
+                            <div class="gender-document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+
+                            <div class="gender-document-details">
+
+                                <div class="gender-document-topline">
+
+                                    <span class="gender-document-category">
+                                        Research Paper
+                                    </span>
+
+                                    <span class="gender-document-format">
+                                        PDF
+                                    </span>
+
+                                </div>
+
+                                <h4>
+                                    Women and Leadership in Community Development
+                                </h4>
+
+                                <p>
+                                    Exploring women's participation in leadership,
+                                    decision-making, and community development.
+                                </p>
+
+                                <div class="gender-document-actions">
+
+                                    <a href="documents/WEBSITE DESIGN BRIEF.pdf"
+                                    class="gender-view-document"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                        <i class="fas fa-eye"></i>
+                                        View PDF
+
+                                    </a>
+
+                                    <a href="documents/WEBSITE DESIGN BRIEF.pdf"
+                                    class="gender-download-document"
+                                    download>
+
+                                        <i class="fas fa-download"></i>
+                                        Download
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- DOCUMENT 2 -->
+                        <article class="gender-document-card"
+                                data-category="policy">
+
+                            <div class="gender-document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+
+                            <div class="gender-document-details">
+
+                                <div class="gender-document-topline">
+
+                                    <span class="gender-document-category">
+                                        Policy Brief
+                                    </span>
+
+                                    <span class="gender-document-format">
+                                        PDF
+                                    </span>
+
+                                </div>
+
+                                <h4>
+                                    Advancing Women's Participation in Decision-Making
+                                </h4>
+
+                                <p>
+                                    A policy-focused resource examining opportunities
+                                    for stronger representation and participation.
+                                </p>
+
+                                <div class="gender-document-actions">
+
+                                    <a href="documents/WEBSITE DESIGN BRIEF.pdf"
+                                    class="gender-view-document"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                        <i class="fas fa-eye"></i>
+                                        View PDF
+
+                                    </a>
+
+                                    <a href="documents/WEBSITE DESIGN BRIEF.pdf"
+                                    class="gender-download-document"
+                                    download>
+
+                                        <i class="fas fa-download"></i>
+                                        Download
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- DOCUMENT 3 -->
+                        <article class="gender-document-card"
+                                data-category="reports">
+
+                            <div class="gender-document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+
+                            <div class="gender-document-details">
+
+                                <div class="gender-document-topline">
+
+                                    <span class="gender-document-category">
+                                        Report
+                                    </span>
+
+                                    <span class="gender-document-format">
+                                        PDF
+                                    </span>
+
+                                </div>
+
+                                <h4>
+                                    Gender Equality and Economic Empowerment
+                                </h4>
+
+                                <p>
+                                    A resource highlighting barriers and opportunities
+                                    related to women's economic participation.
+                                </p>
+
+                                <div class="gender-document-actions">
+
+                                    <a href="documents/WEBSITE DESIGN BRIEF.pdf"
+                                    class="gender-view-document"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                        <i class="fas fa-eye"></i>
+                                        View PDF
+
+                                    </a>
+
+                                    <a href="documents/WEBSITE DESIGN BRIEF.pdf"
+                                    class="gender-download-document"
+                                    download>
+
+                                        <i class="fas fa-download"></i>
+                                        Download
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- DOCUMENT 4 -->
+                        <article class="gender-document-card"
+                                data-category="research">
+
+                            <div class="gender-document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+
+                            <div class="gender-document-details">
+
+                                <div class="gender-document-topline">
+
+                                    <span class="gender-document-category">
+                                        Research Paper
+                                    </span>
+
+                                    <span class="gender-document-format">
+                                        PDF
+                                    </span>
+
+                                </div>
+
+                                <h4>
+                                    Addressing Gender-Based Violence Through Awareness
+                                </h4>
+
+                                <p>
+                                    Exploring the importance of awareness, dialogue,
+                                    and community action in addressing gender-based
+                                    violence.
+                                </p>
+
+                                <div class="gender-document-actions">
+
+                                    <a href="documents/WEBSITE DESIGN BRIEF.pdf"
+                                    class="gender-view-document"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                        <i class="fas fa-eye"></i>
+                                        View PDF
+
+                                    </a>
+
+                                    <a href="documents/WEBSITE DESIGN BRIEF.pdf"
+                                    class="gender-download-document"
+                                    download>
+
+                                        <i class="fas fa-download"></i>
+                                        Download
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <!-- EMPTY STATE -->
+                    <div class="gender-research-empty" hidden>
+
+                        <i class="fas fa-folder-open"></i>
+
+                        <p>
+                            No documents found in this category.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     GENDER ADVOCACY PARTNERSHIP CTA
+    ========================================== -->
+    <section class="gender-partnership-cta"
+            id="gender-partnership">
+
+        <div class="gender-partnership-background"></div>
+
+        <div class="gender-partnership-overlay"></div>
+
+        <div class="gender-partnership-container"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <div class="gender-partnership-content">
+
+                <span class="gender-partnership-label">
+                    Get Involved
+                </span>
+
+                <h2>
+                    Be Part of the Movement for
+                    <span>Gender Equality</span>
+                </h2>
+
+                <p>
+                    Meaningful change happens when communities, organizations,
+                    researchers, institutions, and development partners work
+                    together. Join us in creating awareness, strengthening
+                    participation, generating knowledge, and supporting action
+                    around gender-related challenges.
+                </p>
+
+                <div class="gender-partnership-actions">
+
+                    <a href="contact.html"
+                    class="gender-partnership-primary-btn">
+
+                        Partner With Us
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                    <a href="contact.html#contact-form"
+                    class="gender-partnership-secondary-btn">
+
+                        Start a Conversation
+
+                        <i class="fas fa-comments"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PARTNERSHIP OPPORTUNITIES -->
+
+            <div class="gender-partnership-opportunities">
+
+                <div class="gender-opportunity-item">
+
+                    <div class="gender-opportunity-icon">
+                        <i class="fas fa-file-pen"></i>
+                    </div>
+
+                    <div>
+                        <h4>Support Research</h4>
+
+                        <p>
+                            Support the development of papers and knowledge
+                            resources on gender-related issues.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="gender-opportunity-item">
+
+                    <div class="gender-opportunity-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+
+                    <div>
+                        <h4>Support Awareness</h4>
+
+                        <p>
+                            Help us share information through campaigns,
+                            publications, workshops, and community platforms.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="gender-opportunity-item">
+
+                    <div class="gender-opportunity-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+
+                    <div>
+                        <h4>Engage Communities</h4>
+
+                        <p>
+                            Collaborate with us to strengthen community voices
+                            and promote meaningful participation.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FOOTER
+    ========================================== -->
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div class="footer-container">
+
+                <!-- ==================================
+                    ORGANIZATION IDENTITY
+                =================================== -->
+                <div class="footer-column footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                        <img src="logo/logo new cbo_page.jpg"
+                            alt="Shining Communities CBO Logo">
+                    </a>
+
+                    <h3>
+                        Shining Communities CBO
+                    </h3>
+
+                    <p class="footer-tagline">
+                        The Advocacy Network for Development
+                    </p>
+
+                    <p>
+                        Shining Communities CBO gives voice to communities
+                        and works to reduce marginalization through advocacy,
+                        awareness, participation, and inclusive development.
+                    </p>
+
+                    <a href="about.html" class="footer-about-link">
+                        Learn More About Us
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- ==================================
+                    QUICK LINKS
+                =================================== -->
+                <div class="footer-column">
+
+                    <h4 class="footer-heading">
+                        Quick Links
+                    </h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-angle-right"></i>
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">
+                                <i class="fas fa-angle-right"></i>
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pillars.html">
+                                <i class="fas fa-angle-right"></i>
+                                Our Pillars
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="publications.html">
+                                <i class="fas fa-angle-right"></i>
+                                Publications
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="events.html">
+                                <i class="fas fa-angle-right"></i>
+                                Events
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                <i class="fas fa-angle-right"></i>
+                                Contact Us
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ==================================
+                    ADVOCACY PILLARS
+                =================================== -->
+                <div class="footer-column">
+
+                    <h4 class="footer-heading">
+                        Our Four Pillars
+                    </h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="gender-advocacy.html">
+                                <i class="fas fa-angle-right"></i>
+                                Gender Advocacy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="children-youth-advocacy.html">
+                                <i class="fas fa-angle-right"></i>
+                                Children &amp; Youth Advocacy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="water-rights-environment.html">
+                                <i class="fas fa-angle-right"></i>
+                                Water Rights &amp; Environment
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="global-trade-advocacy.html">
+                                <i class="fas fa-angle-right"></i>
+                                Global Trade Advocacy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="partnership.html">
+                                <i class="fas fa-angle-right"></i>
+                                Get Involved
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="news.html">
+                                <i class="fas fa-angle-right"></i>
+                                News &amp; Updates
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ==================================
+                    CONTACT AND NEWSLETTER
+                =================================== -->
+                <div class="footer-column footer-contact-column">
+
+                    <h4 class="footer-heading">
+                        Stay Connected
+                    </h4>
+
+                    <p class="footer-contact-intro">
+                        Connect with us and stay informed on the latest updates.
+                    </p>
+
+
+                    <!-- CONTACT DETAILS -->
+                    <ul class="footer-contact-list">
+
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+
+                            <span>
+                                Kenya
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-envelope"></i>
+
+                            <a href="mailto:info@shiningcommunities.org">
+                                info@shiningcommunities.org
+                            </a>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+
+                            <a href="tel:+254700000000">
+                                +254 700 000 000
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <!-- NEWSLETTER -->
+                    <div class="footer-newsletter">
+
+                        <h5>
+                            Subscribe to Our Newsletter
+                        </h5>
+
+                        <form class="newsletter-form"
+                            action="#"
+                            method="post">
+
+                            <label for="footer-email" class="sr-only">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="footer-email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+
+                            <button type="submit"
+                                    aria-label="Subscribe to newsletter">
+
+                                <i class="fas fa-paper-plane"></i>
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================================
+            FOOTER BOTTOM
+        =========================================== -->
+        <div class="footer-bottom">
+
+            <div class="footer-bottom-container">
+
+                <p>
+                    &copy;
+                    <span id="currentYear"></span>
+                    Shining Communities CBO.
+                    All Rights Reserved. Crafted @ <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">Brydex Technologies
+                </p>
+
+                <div class="footer-bottom-links">
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="terms.html">
+                        Terms &amp; Conditions
+                    </a>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+                <div class="footer-socials">
+
+                    <a href="#"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#"
+                    aria-label="X"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fab fa-x-twitter"></i>
+
+                    </a>
+
+                    <a href="#"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fab fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            const menuBtn = document.getElementById("menu-btn");
+            const navbar = document.getElementById("navbar");
+            const mainHeader = document.getElementById("main-header");
+
+            /*
+            ==========================================
+            MOBILE MENU TOGGLE
+            ==========================================
+            */
+
+            if(menuBtn && navbar){
+
+                menuBtn.addEventListener("click", function(){
+
+                    menuBtn.classList.toggle("active");
+
+                    navbar.classList.toggle("active");
+
+                    const isOpen = navbar.classList.contains("active");
+
+                    menuBtn.setAttribute("aria-expanded", isOpen);
+
+                });
+
+            }
+
+
+            /*
+            ==========================================
+            DROPDOWN TOGGLE
+            ==========================================
+            */
+
+            const dropdowns = document.querySelectorAll(".dropdown");
+
+            dropdowns.forEach(function(dropdown){
+
+                const toggle = dropdown.querySelector(".dropdown-toggle");
+
+                if(!toggle) return;
+
+                toggle.addEventListener("click", function(event){
+
+                    event.preventDefault();
+
+                    event.stopPropagation();
+
+                    const isActive = dropdown.classList.contains("active");
+
+                    // Close other dropdowns
+                    dropdowns.forEach(function(item){
+
+                        item.classList.remove("active");
+
+                        const content = item.querySelector(".dropdown-content");
+
+                        const button = item.querySelector(".dropdown-toggle");
+
+                        if(content) content.style.display = "none";
+
+                        if(button) button.setAttribute("aria-expanded", "false");
+
+                    });
+
+
+                    if(!isActive){
+
+                        dropdown.classList.add("active");
+
+                        const content = dropdown.querySelector(".dropdown-content");
+
+                        if(content) content.style.display = "block";
+
+                        toggle.setAttribute("aria-expanded", "true");
+
+                    }
+
+                });
+
+            });
+
+
+            /*
+            ==========================================
+            CLOSE DROPDOWN WHEN CLICKING OUTSIDE
+            ==========================================
+            */
+
+            document.addEventListener("click", function(event){
+
+                if(!event.target.closest(".dropdown")){
+
+                    dropdowns.forEach(function(dropdown){
+
+                        dropdown.classList.remove("active");
+
+                        const content = dropdown.querySelector(".dropdown-content");
+
+                        const toggle = dropdown.querySelector(".dropdown-toggle");
+
+                        if(content) content.style.display = "none";
+
+                        if(toggle) toggle.setAttribute("aria-expanded", "false");
+
+                    });
+
+                }
+
+            });
+
+
+            /*
+            ==========================================
+            CLOSE MOBILE MENU AFTER LINK CLICK
+            ==========================================
+            */
+
+            const navLinks = document.querySelectorAll(
+                ".navbar > ul > li:not(.dropdown) a"
+            );
+
+            navLinks.forEach(function(link){
+
+                link.addEventListener("click", function(){
+
+                    if(window.innerWidth <= 1050){
+
+                        navbar.classList.remove("active");
+
+                        menuBtn.classList.remove("active");
+
+                        menuBtn.setAttribute("aria-expanded", "false");
+
+                    }
+
+                });
+
+            });
+
+
+            /*
+            ==========================================
+            STICKY HEADER SCROLL EFFECT
+            ==========================================
+            */
+
+            window.addEventListener("scroll", function(){
+
+                if(window.scrollY > 30){
+
+                    mainHeader.classList.add("scrolled");
+
+                }else{
+
+                    mainHeader.classList.remove("scrolled");
+
+                }
+
+            });
+
+
+            /*
+            ==========================================
+            RESET MOBILE MENU ON RESIZE
+            ==========================================
+            */
+
+            window.addEventListener("resize", function(){
+
+                if(window.innerWidth > 1050){
+
+                    navbar.classList.remove("active");
+
+                    menuBtn.classList.remove("active");
+
+                    menuBtn.setAttribute("aria-expanded", "false");
+
+                }
+
+            });
+
+        });
+
+        // SCROLL BUTTON
+        let calcScrollValue = () => {
+            let scrollProgress = document.getElementById("progress");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round((pos * 100)/calcHeight);
+
+            if (pos > 100) {
+                scrollProgress.style.display = "grid";
+            } else {
+                scrollProgress.style.display = "none";
+            }
+
+            scrollProgress.onclick = () => {
+                document.documentElement.scrollTop = 0;
+            };
+
+            scrollProgress.style.background =
+                `conic-gradient(#0B2C6B ${scrollValue}%, white ${scrollValue}%)`;
+        };
+
+        window.addEventListener("scroll", calcScrollValue);
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+
+                const filterButtons = document.querySelectorAll(
+                    ".gender-filter-button"
+                );
+
+                const documentCards = document.querySelectorAll(
+                    ".gender-document-card"
+                );
+
+                const emptyState = document.querySelector(
+                    ".gender-research-empty"
+                );
+
+                filterButtons.forEach(function (button) {
+
+                    button.addEventListener("click", function () {
+
+                        const selectedCategory = button.dataset.filter;
+
+                        let visibleDocuments = 0;
+
+                        filterButtons.forEach(function (item) {
+                            item.classList.remove("active");
+                        });
+
+                        button.classList.add("active");
+
+                        documentCards.forEach(function (card) {
+
+                            const cardCategory = card.dataset.category;
+
+                            const shouldShow =
+                                selectedCategory === "all" ||
+                                cardCategory === selectedCategory;
+
+                            if (shouldShow) {
+                                card.style.display = "flex";
+                                visibleDocuments++;
+                            } else {
+                                card.style.display = "none";
+                            }
+
+                        });
+
+                        if (emptyState) {
+                            emptyState.hidden = visibleDocuments !== 0;
+                        }
+
+                    });
+
+                });
+
+            });
+    </script>
+</body>
+</html>

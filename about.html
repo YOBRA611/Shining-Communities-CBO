@@ -1,0 +1,2435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>About | Shining Communities CBO</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo/logo new cbo_page.jpg">
+</head>
+<Style>
+/* ==========================================
+   ABOUT PAGE HERO
+========================================== */
+.about-page-hero {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: var(--white);
+}
+.about-page-hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background-image: url("image/8d6ea1eae4e6d4b507835ca942269ee3.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(36, 52, 71, 0.94) 0%,
+            rgba(21, 85, 140, 0.78) 52%,
+            rgba(36, 52, 71, 0.42) 100%
+        );
+}
+.about-page-hero-container {
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 85px 5%;
+}
+.about-page-hero-content {
+    max-width: 850px;
+}
+.about-page-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 22px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+}
+.about-page-breadcrumb a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.about-page-breadcrumb a:hover {
+    color: var(--white);
+}
+.about-page-breadcrumb i {
+    color: rgba(255, 255, 255, 0.925);
+    font-size: 18px;
+}
+.about-page-breadcrumb span {
+    color: rgb(255, 255, 255);
+}
+.about-page-hero h1 {
+    max-width: 800px;
+    margin: 0 0 18px;
+    color: var(--white);
+    font-size: clamp(34px, 4.5vw, 57px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+.about-page-hero p {
+    margin: 0;
+    color: var(--white);
+    font-size: clamp(16px, 1.7vw, 20px);
+    line-height: 1.5;
+    font-weight: 500;
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+@media (max-width: 992px) {
+    .about-page-hero {
+        min-height: 350px;
+    }
+    .about-page-hero-container {
+        padding: 75px 6%;
+    }
+    .about-page-hero h1 {
+        font-size: 46px;
+    }
+}
+@media (max-width: 600px) {
+    .about-page-hero {
+        min-height: 320px;
+    }
+    .about-page-hero-container {
+        padding: 70px 9%;
+    }
+    .about-page-breadcrumb {
+        margin-bottom: 18px;
+        font-size: 11px;
+    }
+    .about-page-hero h1 {
+        font-size: 34px;
+        letter-spacing: -0.4px;
+    }
+    .about-page-hero p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 380px) {
+    .about-page-hero h1 {
+        font-size: 30px;
+    }
+}
+/* ==========================================
+   ORGANIZATION INTRODUCTION
+========================================== */
+.organization-introduction {
+    position: relative;
+    padding: 100px 5%;
+    background: var(--white);
+    overflow: hidden;
+}
+.organization-introduction-container {
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: 75px;
+}
+/* ==========================================
+   IMAGE AREA
+========================================== */
+.organization-introduction-visual {
+    position: relative;
+    min-height: 535px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.organization-main-image {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 510px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--light);
+    box-shadow: 0 20px 45px rgba(36, 52, 71, 0.14);
+}
+.organization-main-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.organization-main-image:hover img {
+    transform: scale(1.06);
+}
+/* ==========================================
+   IMAGE FLOATING CARD
+========================================== */
+.organization-image-card {
+    position: absolute;
+    left: -28px;
+    bottom: 35px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    max-width: 280px;
+    padding: 19px 22px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 7px;
+    box-shadow: 0 15px 35px rgba(21, 85, 140, 0.25);
+}
+.organization-image-card > i {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 19px;
+}
+.organization-image-card strong,
+.organization-image-card span {
+    display: block;
+}
+.organization-image-card strong {
+    font-size: 17px;
+    font-weight: 800;
+}
+.organization-image-card span {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 16px;
+}
+/* ==========================================
+   DECORATIVE SHAPE
+========================================== */
+.organization-image-shape {
+    position: absolute;
+    top: 28px;
+    right: -22px;
+    z-index: 1;
+    width: 145px;
+    height: 145px;
+    border: 10px solid var(--secondary);
+    border-radius: 8px;
+}
+/* ==========================================
+   CONTENT AREA
+========================================== */
+.organization-introduction-content {
+    position: relative;
+    z-index: 2;
+}
+.organization-section-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.organization-introduction-content h2 {
+    max-width: 700px;
+    margin: 0 0 25px;
+    color: var(--dark);
+    font-size: clamp(31px, 3.3vw, 47px);
+    line-height: 1.18;
+    font-weight: 700;
+}
+.organization-introduction-content h2 span {
+    color: var(--primary);
+}
+.organization-introduction-content p {
+    max-width: 700px;
+    margin: 0 0 17px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.9;
+}
+.organization-introduction-content .organization-lead {
+    color: var(--dark);
+    font-size: 17px;
+    line-height: 1.85;
+}
+/* ==========================================
+   FOCUS AREAS
+========================================== */
+.organization-focus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px 25px;
+    margin-top: 28px;
+}
+.organization-focus-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 400;
+}
+.organization-focus-item i {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: rgba(36, 116, 185, 0.1);
+    color: var(--primary);
+    font-size: 18px;
+}
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+.organization-introduction-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 32px;
+}
+.organization-presentation-btn,
+.organization-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 13px 20px;
+    border-radius: 5px;
+    font-size: 17px;
+    text-decoration: none;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+.organization-presentation-btn {
+    background: var(--primary);
+    color: var(--white);
+}
+.organization-presentation-btn:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+.organization-contact-btn {
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--primary);
+}
+.organization-contact-btn:hover {
+    border-color: var(--primary);
+    background: var(--light);
+    transform: translateY(-3px);
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+@media (max-width: 1200px) {
+    .organization-introduction {
+        padding: 90px 5%;
+    }
+    .organization-introduction-container {
+        gap: 50px;
+    }
+    .organization-image-card {
+        left: -15px;
+    }
+    .organization-image-shape {
+        right: -10px;
+    }
+}
+@media (max-width: 992px) {
+    .organization-introduction-container {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+    .organization-introduction-visual {
+        width: 100%;
+        max-width: 680px;
+        margin: 0 auto;
+    }
+    .organization-introduction-content {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 600px) {
+    .organization-introduction {
+        padding: 70px 5%;
+    }
+    .organization-introduction-visual {
+        min-height: 390px;
+    }
+    .organization-main-image {
+        height: 370px;
+        border-radius: 6px;
+    }
+    .organization-image-card {
+        left: 12px;
+        bottom: 20px;
+        padding: 15px 17px;
+    }
+    .organization-image-shape {
+        top: 15px;
+        right: 0;
+        width: 90px;
+        height: 90px;
+        border-width: 7px;
+    }
+    .organization-introduction-content h2 {
+        font-size: 31px;
+    }
+    .organization-introduction-content .organization-lead {
+        font-size: 15px;
+    }
+    .organization-introduction-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+    .organization-focus-grid {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+    .organization-introduction-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .organization-presentation-btn,
+    .organization-contact-btn {
+        width: 100%;
+    }
+}
+@media (max-width: 380px) {
+    .organization-introduction-content h2 {
+        font-size: 28px;
+    }
+    .organization-image-card {
+        max-width: 245px;
+    }
+}
+/* ==========================================
+   OUR PURPOSE SECTION
+========================================== */
+.our-purpose-section {
+    position: relative;
+    padding: 100px 5%;
+    background: var(--light);
+    overflow: hidden;
+}
+.our-purpose-container {
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+}
+/* ==========================================
+   SECTION HEADING
+========================================== */
+.our-purpose-heading {
+    max-width: 850px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+.purpose-section-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.our-purpose-heading h2 {
+    margin: 0 0 23px;
+    color: var(--dark);
+    font-size: clamp(32px, 3.5vw, 40px);
+    line-height: 1.18;
+    font-weight: 800;
+}
+.our-purpose-heading h2 span {
+    color: var(--primary);
+}
+.our-purpose-heading p {
+    max-width: 780px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.9;
+}
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+.our-purpose-content {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 75px;
+}
+/* ==========================================
+   VISUAL
+========================================== */
+.our-purpose-visual {
+    position: relative;
+    min-height: 555px;
+    display: flex;
+    align-items: center;
+}
+.purpose-image-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--white);
+    box-shadow: 0 20px 45px rgba(36, 52, 71, 0.13);
+}
+.purpose-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(21, 85, 140, 0.35),
+        transparent 55%
+    );
+    pointer-events: none;
+}
+.purpose-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.purpose-image-wrapper:hover img {
+    transform: scale(1.06);
+}
+/* Decorative Shape */
+.our-purpose-visual::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -25px;
+    width: 145px;
+    height: 145px;
+    border: 10px solid var(--secondary);
+    border-radius: 8px;
+    z-index: 1;
+}
+/* Quote Card */
+.purpose-quote-card {
+    position: absolute;
+    right: -28px;
+    bottom: 35px;
+    z-index: 4;
+    width: min(330px, 85%);
+    padding: 25px 27px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 7px;
+    box-shadow: 0 18px 38px rgba(21, 85, 140, 0.25);
+}
+.purpose-quote-card i {
+    margin-bottom: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+}
+.purpose-quote-card p {
+    margin: 0 0 14px;
+    color: var(--white);
+    font-size: 17px;
+    line-height: 1.65;
+}
+.purpose-quote-card span {
+    display: block;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+/* ==========================================
+   PURPOSE POINTS
+========================================== */
+.our-purpose-points {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.purpose-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 24px;
+    background: var(--white);
+    border-radius: 7px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+.purpose-point:hover {
+    transform: translateY(-4px);
+    border-color: rgba(36, 116, 185, 0.35);
+    box-shadow: 0 12px 30px rgba(36, 52, 71, 0.08);
+}
+.purpose-point-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background: rgba(36, 116, 185, 0.1);
+    color: var(--primary);
+    font-size: 19px;
+}
+.purpose-point-text h3 {
+    margin: 0 0 8px;
+    color: var(--dark);
+    font-size: 17px;
+    line-height: 1.35;
+    font-weight: 800;
+}
+.purpose-point-text p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+@media (max-width: 1200px) {
+    .our-purpose-section {
+        padding: 90px 5%;
+    }
+    .our-purpose-content {
+        gap: 50px;
+    }
+    .purpose-quote-card {
+        right: -15px;
+    }
+    .our-purpose-visual::before {
+        left: -12px;
+    }
+}
+@media (max-width: 992px) {
+    .our-purpose-heading {
+        margin-bottom: 50px;
+    }
+    .our-purpose-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .our-purpose-visual {
+        width: 100%;
+        max-width: 680px;
+        margin: 0 auto;
+    }
+    .our-purpose-points {
+        max-width: 850px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 600px) {
+    .our-purpose-section {
+        padding: 75px 5%;
+    }
+    .our-purpose-heading {
+        margin-bottom: 40px;
+    }
+    .our-purpose-heading h2 {
+        font-size: 31px;
+    }
+    .our-purpose-heading p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .our-purpose-visual {
+        min-height: 405px;
+    }
+    .purpose-image-wrapper {
+        height: 385px;
+        border-radius: 6px;
+    }
+    .our-purpose-visual::before {
+        top: 15px;
+        left: 0;
+        width: 90px;
+        height: 90px;
+        border-width: 7px;
+    }
+    .purpose-quote-card {
+        right: 12px;
+        bottom: 20px;
+        width: calc(100% - 24px);
+        padding: 20px;
+    }
+    .purpose-quote-card p {
+        font-size: 16px;
+    }
+    .purpose-point {
+        gap: 13px;
+        padding: 18px;
+    }
+    .purpose-point-icon {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+        font-size: 19px;
+    }
+    .purpose-point-text h3 {
+        font-size: 17px;
+    }
+    .purpose-point-text p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+}
+@media (max-width: 380px) {
+    .our-purpose-heading h2 {
+        font-size: 28px;
+    }
+    .purpose-point {
+        align-items: flex-start;
+    }
+    .purpose-point-icon {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+    }
+}
+/* ==========================================
+   OUR FOUR ADVOCACY PILLARS
+========================================== */
+.advocacy-pillars-section {
+    position: relative;
+    padding: 100px 5%;
+    background: var(--white);
+    overflow: hidden;
+}
+.advocacy-pillars-container {
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+}
+/* ==========================================
+   SECTION HEADING
+========================================== */
+.advocacy-pillars-heading {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+.pillars-section-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.advocacy-pillars-heading h2 {
+    margin: 0 0 23px;
+    color: var(--dark);
+    font-size: clamp(32px, 3.5vw, 42px);
+    line-height: 1.18;
+    font-weight: 800;
+}
+.advocacy-pillars-heading h2 span {
+    color: var(--primary);
+}
+.advocacy-pillars-heading p {
+    max-width: 780px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.9;
+}
+/* ==========================================
+   PILLARS GRID
+========================================== */
+.advocacy-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+/* ==========================================
+   PILLAR CARD
+========================================== */
+.advocacy-pillar-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--white);
+    border-radius: 7px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(36, 52, 71, 0.377);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+.advocacy-pillar-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(36, 116, 185, 0.35);
+    box-shadow: 0 18px 40px rgba(36, 52, 71, 0.12);
+}
+/* ==========================================
+   IMAGE
+========================================== */
+.advocacy-pillar-image {
+    position: relative;
+    height: 235px;
+    overflow: hidden;
+    background: var(--light);
+}
+.advocacy-pillar-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.advocacy-pillar-card:hover .advocacy-pillar-image img {
+    transform: scale(1.08);
+}
+.advocacy-pillar-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(21, 85, 140, 0.65),
+        rgba(36, 52, 71, 0.02) 75%
+    );
+    pointer-events: none;
+}
+.advocacy-pillar-number {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--secondary);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 400;
+}
+/* ==========================================
+   CARD CONTENT
+========================================== */
+.advocacy-pillar-content {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px 25px;
+}
+.advocacy-pillar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-top: -52px;
+    margin-bottom: 22px;
+    position: relative;
+    z-index: 3;
+    border: 2px solid var(--white);
+    border-radius: 7px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 19px;
+    box-shadow: 0 8px 20px rgba(21, 85, 140, 0.2);
+}
+.advocacy-pillar-content h3 {
+    min-height: 45px;
+    margin: 0 0 9px;
+    color: var(--dark);
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 600;
+}
+.advocacy-pillar-content p {
+    margin: 0 0 15px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+.advocacy-pillar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+    font-size: 16px;
+    transition: color 0.3s ease, gap 0.3s ease;
+}
+.advocacy-pillar-link i {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+.advocacy-pillar-card:hover .advocacy-pillar-link {
+    color: var(--secondary);
+    gap: 14px;
+}
+.advocacy-pillar-card:hover .advocacy-pillar-link i {
+    transform: translateX(3px);
+}
+/* ==========================================
+   BOTTOM CTA
+========================================== */
+.advocacy-pillars-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 55px;
+    padding: 28px 32px;
+    border-left: 3px solid var(--secondary);
+    background: var(--light);
+}
+.advocacy-pillars-cta p {
+    margin: 0;
+    color: var(--dark);
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+.pillars-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 12px;
+    min-height: 48px;
+    padding: 13px 21px;
+    border-radius: 5px;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+.pillars-cta-button:hover {
+    background: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+@media (max-width: 1200px) {
+    .advocacy-pillars-section {
+        padding: 90px 5%;
+    }
+    .advocacy-pillars-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+    .advocacy-pillar-image {
+        height: 270px;
+    }
+}
+@media (max-width: 768px) {
+    .advocacy-pillars-heading {
+        margin-bottom: 45px;
+    }
+    .advocacy-pillars-grid {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+    .advocacy-pillar-image {
+        height: 280px;
+    }
+    .advocacy-pillars-cta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 22px;
+        padding: 25px;
+    }
+    .pillars-cta-button {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .advocacy-pillars-section {
+        padding: 75px 5%;
+    }
+    .advocacy-pillars-heading h2 {
+        font-size: 31px;
+    }
+    .advocacy-pillars-heading p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .advocacy-pillar-image {
+        height: 245px;
+    }
+    .advocacy-pillar-content {
+        padding: 26px 21px 23px;
+    }
+    .advocacy-pillar-content h3 {
+        font-size: 19px;
+    }
+    .advocacy-pillar-content p {
+        font-size: 16px;
+    }
+    .advocacy-pillars-cta p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 380px) {
+    .advocacy-pillars-heading h2 {
+        font-size: 28px;
+    }
+    .advocacy-pillar-image {
+        height: 220px;
+    }
+}
+/* ==========================================
+   ORGANIZATION PRESENTATION CTA
+========================================== */
+.presentation-cta-section {
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 110px 7%;
+    isolation: isolate;
+    overflow: hidden;
+
+    /*
+       Sticky background effect
+       The background remains fixed while scrolling.
+    */
+    background-image: url("image/0bcc68cfd4cc0984a0d7c311d6645938.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* ==========================================
+   OVERLAY
+========================================== */
+.presentation-cta-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(21, 85, 140, 0.94),
+            rgba(36, 52, 71, 0.644)
+        );
+}
+/* ==========================================
+   CONTENT
+========================================== */
+.presentation-cta-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+.presentation-cta-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.presentation-cta-container h2 {
+    margin: 0 0 24px;
+    color: var(--white);
+    font-size: clamp(34px, 4vw, 42px);
+    line-height: 1.18;
+    font-weight: 800;
+}
+.presentation-cta-container h2 span {
+    color: var(--secondary);
+}
+.presentation-cta-container p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    line-height: 1.9;
+}
+/* ==========================================
+   BUTTONS
+========================================== */
+.presentation-cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 35px;
+}
+.presentation-download-button,
+.presentation-contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    min-height: 52px;
+    padding: 14px 24px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+.presentation-download-button {
+    background: var(--secondary);
+    color: var(--white);
+}
+.presentation-download-button:hover {
+    background: var(--secondary-dark);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+.presentation-contact-button {
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: transparent;
+    color: var(--white);
+}
+.presentation-contact-button:hover {
+    border-color: var(--white);
+    background: var(--white);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+@media (max-width: 992px) {
+    .presentation-cta-section {
+        padding: 90px 5%;
+    }
+}
+@media (max-width: 768px) {
+    /*
+       Fixed backgrounds can behave inconsistently on some
+       mobile browsers, so use a normal cover background.
+    */
+    .presentation-cta-section {
+        min-height: 460px;
+        background-attachment: scroll;
+    }
+    .presentation-cta-container h2 {
+        font-size: 36px;
+    }
+}
+@media (max-width: 600px) {
+    .presentation-cta-section {
+        min-height: 430px;
+        padding: 75px 5%;
+    }
+    .presentation-cta-container h2 {
+        font-size: 31px;
+    }
+    .presentation-cta-container p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+    .presentation-cta-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+    .presentation-download-button,
+    .presentation-contact-button {
+        width: 100%;
+    }
+}
+@media (max-width: 380px) {
+    .presentation-cta-container h2 {
+        font-size: 28px;
+    }
+}
+</Style>
+<body>
+    <!--scrollbutton-->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!-- ==========================================
+     TOP BAR
+    ========================================== -->
+    <div class="top-bar" id="top-bar">
+        <div class="container top-content">
+
+            <div class="top-left">
+                <span>
+                    <i class="fas fa-bullhorn"></i>
+                    The Advocacy Network for Development
+                </span>
+
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    info@shiningcommunities.org
+                </span>
+            </div>
+
+            <div class="top-right">
+                <a href="#" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- ==========================================
+     MAIN HEADER
+    ========================================== -->
+    <header class="main-header" id="main-header">
+        <!-- LOGO AREA -->
+        <div class="logo-section">
+            <a href="index.html" class="logo">
+                <img src="logo/logo new cbo_page.jpg" alt="Shining Communities CBO">
+            </a>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <!-- PROGRAMS DROPDOWN -->
+                <li class="dropdown">
+                    <div class="dropdown-header">
+                        <a href="programs.html" class="explore-link">Our Pillars</a>
+                        <button class="dropdown-toggle" type="button" aria-label="Toggle Programs menu" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><a href="gender-advocacy.html">Gender Advocacy</a></li>
+                        <li><a href="children-youth-advocacy.html">Children & Youth Advocacy</a></li>
+                        <li><a href="water-environment-advocacy.html">Water Rights & Environment Advocacy</a></li>
+                        <li><a href="global-trade-advocacy.html">Global Trade Advocacy</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- HEADER ACTIONS -->
+            <div class="header-actions">
+                <a href="partnership.html" class="partnership-btn">Get Involved<i class="fas fa-arrow-right"></i></a>
+                <button class="header-search-btn" type="button" aria-label="Search website">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button class="menu-btn" id="menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+    <!-- ==========================================
+     ABOUT PAGE HERO
+    ========================================== -->
+    <section class="about-page-hero">
+
+        <div class="about-page-hero-background"></div>
+
+        <div class="about-page-hero-overlay"></div>
+
+        <div class="about-page-hero-container">
+
+            <div class="about-page-hero-content"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <span class="about-page-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-angle-right"></i>
+                    <span>About Us</span>
+                </span>
+
+                <h1>
+                    About Shining Communities CBO
+                </h1>
+
+                <p>
+                    The Advocacy Network for Development
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     ORGANIZATION INTRODUCTION
+    ========================================== -->
+    <section class="organization-introduction" id="organization-introduction">
+
+        <div class="organization-introduction-container">
+
+            <!-- IMAGE AREA -->
+            <div class="organization-introduction-visual"
+                data-aos="fade-right"
+                data-aos-duration="1000">
+
+                <div class="organization-main-image">
+
+                    <img src="image/c3eb69aca1301d47c71a8f06c21c46d5.jpg"
+                        alt="Shining Communities CBO supporting community advocacy and development">
+
+                </div>
+
+                <div class="organization-image-card">
+
+                    <i class="fas fa-users"></i>
+
+                    <div>
+                        <strong>Community Voices</strong>
+                        <span>Awareness, Advocacy &amp; Action</span>
+                    </div>
+
+                </div>
+
+                <div class="organization-image-shape"></div>
+
+            </div>
+
+
+            <!-- CONTENT AREA -->
+            <div class="organization-introduction-content"
+                data-aos="fade-left"
+                data-aos-duration="1000">
+
+                <span class="organization-section-label">
+                    Who We Are
+                </span>
+
+                <h2>
+                    Giving Communities a Voice for
+                    <span>Inclusive Development</span>
+                </h2>
+
+                <p class="organization-lead">
+                    Shining Communities CBO is Kenya’s advocacy initiative for
+                    development. Our work focuses on giving voice to communities
+                    with a view to reducing the marginalisation gap in the areas
+                    of gender, children and youth, water and sanitation rights,
+                    and global trade.
+                </p>
+
+                <p>
+                    We seek to generate knowledge around these areas, create
+                    awareness among relevant actors, and build a rationale for
+                    meaningful action. Our approach involves reviewing current
+                    trends, identifying gaps and challenges, understanding what
+                    needs to be done, and identifying platforms through which
+                    community voices can be heard.
+                </p>
+
+                <p>
+                    The information and experiences gathered are developed into
+                    papers, newsletters, posters, and publications. These are
+                    shared through seminars, workshops, international meetings,
+                    conferences, and digital platforms, including our website.
+                </p>
+
+
+                <!-- FOCUS AREAS -->
+                <div class="organization-focus-grid">
+
+                    <div class="organization-focus-item">
+
+                        <i class="fas fa-bullhorn"></i>
+
+                        <span>
+                            Awareness Creation
+                        </span>
+
+                    </div>
+
+                    <div class="organization-focus-item">
+
+                        <i class="fas fa-comments"></i>
+
+                        <span>
+                            Community Participation
+                        </span>
+
+                    </div>
+
+                    <div class="organization-focus-item">
+
+                        <i class="fas fa-book-open"></i>
+
+                        <span>
+                            Knowledge Generation
+                        </span>
+
+                    </div>
+
+                    <div class="organization-focus-item">
+
+                        <i class="fas fa-hands-helping"></i>
+
+                        <span>
+                            Advocacy &amp; Action
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIONS -->
+                <div class="organization-introduction-actions">
+
+                    <a href="documents/Shining Communities Presentation Final.pptx"
+                    class="organization-presentation-btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                        <i class="fas fa-file-powerpoint"></i>
+                        View Organization Presentation
+                    </a>
+
+                    <a href="contact.html"
+                    class="organization-contact-btn">
+
+                        Contact Us
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     OUR PURPOSE SECTION
+    ========================================== -->
+    <section class="our-purpose-section" id="our-purpose">
+
+        <div class="our-purpose-container">
+
+            <!-- SECTION INTRODUCTION -->
+            <div class="our-purpose-heading"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <span class="purpose-section-label">Our Purpose</span>
+
+                <h2>
+                    Creating Space for
+                    <span>Every Community Voice</span>
+                </h2>
+
+                <p>
+                    Shining Communities CBO exists to give communities a voice
+                    and contribute towards reducing the marginalization gap.
+                    Through knowledge generation, awareness creation and
+                    meaningful engagement, we work to ensure that communities
+                    are better positioned to participate in issues that affect
+                    their lives and development.
+                </p>
+
+            </div>
+
+            <!-- PURPOSE CONTENT -->
+            <div class="our-purpose-content">
+
+                <!-- VISUAL -->
+                <div class="our-purpose-visual"
+                    data-aos="fade-right"
+                    data-aos-duration="1000">
+
+                    <div class="purpose-image-wrapper">
+                        <img src="image/8d6ea1eae4e6d4b507835ca942269ee3.jpg"
+                            alt="Community members participating in advocacy and development activities">
+                    </div>
+
+                    <div class="purpose-quote-card">
+                        <i class="fas fa-quote-left"></i>
+
+                        <p>
+                            Giving voice to communities with a view to reducing
+                            the marginalization gap.
+                        </p>
+
+                        <span>Our Thrust</span>
+                    </div>
+
+                </div>
+
+                <!-- PURPOSE POINTS -->
+                <div class="our-purpose-points"
+                    data-aos="fade-left"
+                    data-aos-duration="1000">
+
+                    <div class="purpose-point">
+                        <div class="purpose-point-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+
+                        <div class="purpose-point-text">
+                            <h3>Giving Communities a Voice</h3>
+
+                            <p>
+                                Creating opportunities for communities to express
+                                their experiences, concerns, priorities and
+                                aspirations on matters affecting their development.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="purpose-point">
+                        <div class="purpose-point-icon">
+                            <i class="fas fa-people-arrows"></i>
+                        </div>
+
+                        <div class="purpose-point-text">
+                            <h3>Reducing Marginalization</h3>
+
+                            <p>
+                                Addressing gaps that prevent individuals and
+                                communities from being meaningfully included in
+                                social, economic and development processes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="purpose-point">
+                        <div class="purpose-point-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div class="purpose-point-text">
+                            <h3>Creating Awareness</h3>
+
+                            <p>
+                                Generating and sharing knowledge that helps
+                                communities, institutions and other actors
+                                understand important issues and emerging challenges.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="purpose-point">
+                        <div class="purpose-point-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+
+                        <div class="purpose-point-text">
+                            <h3>Promoting Community Participation</h3>
+
+                            <p>
+                                Encouraging active participation in discussions,
+                                initiatives, platforms and decisions that shape
+                                community wellbeing and development.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="purpose-point">
+                        <div class="purpose-point-icon">
+                            <i class="fas fa-arrow-right-arrow-left"></i>
+                        </div>
+
+                        <div class="purpose-point-text">
+                            <h3>Turning Knowledge into Action</h3>
+
+                            <p>
+                                Transforming information, research and community
+                                experiences into practical advocacy, awareness
+                                initiatives and meaningful action.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     OUR FOUR ADVOCACY PILLARS
+    ========================================== -->
+    <section class="advocacy-pillars-section" id="advocacy-pillars">
+
+        <div class="advocacy-pillars-container">
+
+            <!-- SECTION HEADING -->
+            <div class="advocacy-pillars-heading"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+
+                <span class="pillars-section-label">
+                    Our Areas of Focus
+                </span>
+
+                <h2>
+                    Our 
+                    <span>Advocacy Pillars</span>
+                </h2>
+
+                <p>
+                    Our work is anchored around four key advocacy areas through
+                    which we seek to amplify community voices, promote inclusion,
+                    generate awareness and support meaningful development action.
+                </p>
+
+            </div>
+
+            <!-- PILLARS GRID -->
+            <div class="advocacy-pillars-grid">
+
+                <!-- GENDER ADVOCACY -->
+                <a href="gender-advocacy.html"
+                class="advocacy-pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="900">
+
+                    <div class="advocacy-pillar-image">
+                        <img src="image/8d6ea1eae4e6d4b507835ca942269ee3.jpg"
+                            alt="Gender Advocacy">
+
+                        <span class="advocacy-pillar-number">01</span>
+
+                        <div class="advocacy-pillar-overlay"></div>
+                    </div>
+
+                    <div class="advocacy-pillar-content">
+
+                        <div class="advocacy-pillar-icon">
+                            <i class="fas fa-venus-mars"></i>
+                        </div>
+
+                        <h3>Gender Advocacy</h3>
+
+                        <p>
+                            Promoting gender inclusion, women’s leadership,
+                            economic empowerment and awareness around
+                            gender-based violence.
+                        </p>
+
+                        <span class="advocacy-pillar-link">
+                            Explore Pillar
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </a>
+
+                <!-- CHILDREN AND YOUTH ADVOCACY -->
+                <a href="children-youth-advocacy.html"
+                class="advocacy-pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="900">
+
+                    <div class="advocacy-pillar-image">
+                        <img src="image/ee7b6a91f39b6246f4b46b4870b63ad1.jpg"
+                            alt="Children and Youth Advocacy">
+
+                        <span class="advocacy-pillar-number">02</span>
+
+                        <div class="advocacy-pillar-overlay"></div>
+                    </div>
+
+                    <div class="advocacy-pillar-content">
+
+                        <div class="advocacy-pillar-icon">
+                            <i class="fas fa-children"></i>
+                        </div>
+
+                        <h3>Children &amp; Youth Advocacy</h3>
+
+                        <p>
+                            Supporting awareness and action around issues
+                            affecting children and young people, including
+                            vulnerable and marginalized groups.
+                        </p>
+
+                        <span class="advocacy-pillar-link">
+                            Explore Pillar
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </a>
+
+                <!-- WATER AND SANITATION RIGHTS -->
+                <a href="water-environment-advocacy.html"
+                class="advocacy-pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                data-aos-duration="900">
+
+                    <div class="advocacy-pillar-image">
+                        <img src="image/9af9fe9f16bf0bb57a07796d1d045f45.jpg"
+                            alt="Water and Sanitation Rights Advocacy">
+
+                        <span class="advocacy-pillar-number">03</span>
+
+                        <div class="advocacy-pillar-overlay"></div>
+                    </div>
+
+                    <div class="advocacy-pillar-content">
+
+                        <div class="advocacy-pillar-icon">
+                            <i class="fas fa-droplet"></i>
+                        </div>
+
+                        <h3>Water &amp; Environment Advocacy</h3>
+
+                        <p>
+                            Advancing discussions around access, governance,
+                            representation and participation in water,
+                            sanitation and environmental matters.
+                        </p>
+
+                        <span class="advocacy-pillar-link">
+                            Explore Pillar
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </a>
+
+                <!-- BUSINESS AND GLOBAL TRADE -->
+                <a href="global-trade-advocacy.html"
+                class="advocacy-pillar-card"
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="900">
+
+                    <div class="advocacy-pillar-image">
+                        <img src="image/c3eb69aca1301d47c71a8f06c21c46d5.jpg"
+                            alt="Business and Global Trade Advocacy">
+
+                        <span class="advocacy-pillar-number">04</span>
+
+                        <div class="advocacy-pillar-overlay"></div>
+                    </div>
+
+                    <div class="advocacy-pillar-content">
+
+                        <div class="advocacy-pillar-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+
+                        <h3>Business &amp; Global Trade Advocacy</h3>
+
+                        <p>
+                            Focusing on small business development, market access,
+                            trade barriers and issues influencing global trade
+                            participation.
+                        </p>
+
+                        <span class="advocacy-pillar-link">
+                            Explore Pillar
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+            <!-- BOTTOM CTA -->
+            <div class="advocacy-pillars-cta"
+                data-aos="fade-up"
+                data-aos-duration="900">
+
+                <p>
+                    Discover how each advocacy area contributes to inclusive
+                    and meaningful community development.
+                </p>
+
+                <a href="contact.html" class="pillars-cta-button">
+                    Connect With Us
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     ORGANIZATION PRESENTATION CTA
+    ========================================== -->
+    <section class="presentation-cta-section" id="organization-presentation">
+
+        <div class="presentation-cta-overlay"></div>
+
+        <div class="presentation-cta-container"
+            data-aos="fade-up"
+            data-aos-duration="1000">
+
+            <span class="presentation-cta-label">
+                Learn More About Us
+            </span>
+
+            <h2>
+                Learn More About
+                <span>Shining Communities CBO</span>
+            </h2>
+
+            <p>
+                Explore our organization profile, advocacy priorities, approach,
+                and areas of engagement in our presentation.
+            </p>
+
+            <div class="presentation-cta-actions">
+
+                <!-- DOWNLOAD PRESENTATION -->
+                <a href="documents/shining-communities-presentation.pptx"
+                class="presentation-download-button"
+                download>
+
+                    <i class="fas fa-file-powerpoint"></i>
+                    Download Presentation
+
+                </a>
+
+                <!-- CONTACT LINK -->
+                <a href="contact.html"
+                class="presentation-contact-button">
+
+                    Contact Us
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ==========================================
+     FOOTER
+    ========================================== -->
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div class="footer-container">
+
+                <!-- ==================================
+                    ORGANIZATION IDENTITY
+                =================================== -->
+                <div class="footer-column footer-about">
+
+                    <a href="index.html" class="footer-logo">
+                        <img src="logo/logo new cbo_page.jpg"
+                            alt="Shining Communities CBO Logo">
+                    </a>
+
+                    <h3>
+                        Shining Communities CBO
+                    </h3>
+
+                    <p class="footer-tagline">
+                        The Advocacy Network for Development
+                    </p>
+
+                    <p>
+                        Shining Communities CBO gives voice to communities
+                        and works to reduce marginalization through advocacy,
+                        awareness, participation, and inclusive development.
+                    </p>
+
+                    <a href="about.html" class="footer-about-link">
+                        Learn More About Us
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- ==================================
+                    QUICK LINKS
+                =================================== -->
+                <div class="footer-column">
+
+                    <h4 class="footer-heading">
+                        Quick Links
+                    </h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-angle-right"></i>
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">
+                                <i class="fas fa-angle-right"></i>
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pillars.html">
+                                <i class="fas fa-angle-right"></i>
+                                Our Pillars
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="publications.html">
+                                <i class="fas fa-angle-right"></i>
+                                Publications
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="events.html">
+                                <i class="fas fa-angle-right"></i>
+                                Events
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                <i class="fas fa-angle-right"></i>
+                                Contact Us
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ==================================
+                    ADVOCACY PILLARS
+                =================================== -->
+                <div class="footer-column">
+
+                    <h4 class="footer-heading">
+                        Our Four Pillars
+                    </h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="gender-advocacy.html">
+                                <i class="fas fa-angle-right"></i>
+                                Gender Advocacy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="children-youth-advocacy.html">
+                                <i class="fas fa-angle-right"></i>
+                                Children &amp; Youth Advocacy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="water-rights-environment.html">
+                                <i class="fas fa-angle-right"></i>
+                                Water Rights &amp; Environment
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="global-trade-advocacy.html">
+                                <i class="fas fa-angle-right"></i>
+                                Global Trade Advocacy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="partnership.html">
+                                <i class="fas fa-angle-right"></i>
+                                Get Involved
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="news.html">
+                                <i class="fas fa-angle-right"></i>
+                                News &amp; Updates
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ==================================
+                    CONTACT AND NEWSLETTER
+                =================================== -->
+                <div class="footer-column footer-contact-column">
+
+                    <h4 class="footer-heading">
+                        Stay Connected
+                    </h4>
+
+                    <p class="footer-contact-intro">
+                        Connect with us and stay informed on the latest updates.
+                    </p>
+
+
+                    <!-- CONTACT DETAILS -->
+                    <ul class="footer-contact-list">
+
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+
+                            <span>
+                                Kenya
+                            </span>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-envelope"></i>
+
+                            <a href="mailto:info@shiningcommunities.org">
+                                info@shiningcommunities.org
+                            </a>
+                        </li>
+
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+
+                            <a href="tel:+254700000000">
+                                +254 700 000 000
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <!-- NEWSLETTER -->
+                    <div class="footer-newsletter">
+
+                        <h5>
+                            Subscribe to Our Newsletter
+                        </h5>
+
+                        <form class="newsletter-form"
+                            action="#"
+                            method="post">
+
+                            <label for="footer-email" class="sr-only">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="footer-email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required
+                            >
+
+                            <button type="submit"
+                                    aria-label="Subscribe to newsletter">
+
+                                <i class="fas fa-paper-plane"></i>
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================================
+            FOOTER BOTTOM
+        =========================================== -->
+        <div class="footer-bottom">
+
+            <div class="footer-bottom-container">
+
+                <p>
+                    &copy;
+                    <span id="currentYear"></span>
+                    Shining Communities CBO.
+                    All Rights Reserved. Crafted @ <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">Brydex Technologies
+                </p>
+
+                <div class="footer-bottom-links">
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="terms.html">
+                        Terms &amp; Conditions
+                    </a>
+
+                </div>
+
+
+                <!-- SOCIAL MEDIA -->
+                <div class="footer-socials">
+
+                    <a href="#"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#"
+                    aria-label="X"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fab fa-x-twitter"></i>
+
+                    </a>
+
+                    <a href="#"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                        <i class="fab fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            const menuBtn = document.getElementById("menu-btn");
+            const navbar = document.getElementById("navbar");
+            const mainHeader = document.getElementById("main-header");
+
+            /*
+            ==========================================
+            MOBILE MENU TOGGLE
+            ==========================================
+            */
+
+            if(menuBtn && navbar){
+
+                menuBtn.addEventListener("click", function(){
+
+                    menuBtn.classList.toggle("active");
+
+                    navbar.classList.toggle("active");
+
+                    const isOpen = navbar.classList.contains("active");
+
+                    menuBtn.setAttribute("aria-expanded", isOpen);
+
+                });
+
+            }
+
+
+            /*
+            ==========================================
+            DROPDOWN TOGGLE
+            ==========================================
+            */
+
+            const dropdowns = document.querySelectorAll(".dropdown");
+
+            dropdowns.forEach(function(dropdown){
+
+                const toggle = dropdown.querySelector(".dropdown-toggle");
+
+                if(!toggle) return;
+
+                toggle.addEventListener("click", function(event){
+
+                    event.preventDefault();
+
+                    event.stopPropagation();
+
+                    const isActive = dropdown.classList.contains("active");
+
+                    // Close other dropdowns
+                    dropdowns.forEach(function(item){
+
+                        item.classList.remove("active");
+
+                        const content = item.querySelector(".dropdown-content");
+
+                        const button = item.querySelector(".dropdown-toggle");
+
+                        if(content) content.style.display = "none";
+
+                        if(button) button.setAttribute("aria-expanded", "false");
+
+                    });
+
+
+                    if(!isActive){
+
+                        dropdown.classList.add("active");
+
+                        const content = dropdown.querySelector(".dropdown-content");
+
+                        if(content) content.style.display = "block";
+
+                        toggle.setAttribute("aria-expanded", "true");
+
+                    }
+
+                });
+
+            });
+
+
+            /*
+            ==========================================
+            CLOSE DROPDOWN WHEN CLICKING OUTSIDE
+            ==========================================
+            */
+
+            document.addEventListener("click", function(event){
+
+                if(!event.target.closest(".dropdown")){
+
+                    dropdowns.forEach(function(dropdown){
+
+                        dropdown.classList.remove("active");
+
+                        const content = dropdown.querySelector(".dropdown-content");
+
+                        const toggle = dropdown.querySelector(".dropdown-toggle");
+
+                        if(content) content.style.display = "none";
+
+                        if(toggle) toggle.setAttribute("aria-expanded", "false");
+
+                    });
+
+                }
+
+            });
+
+
+            /*
+            ==========================================
+            CLOSE MOBILE MENU AFTER LINK CLICK
+            ==========================================
+            */
+
+            const navLinks = document.querySelectorAll(
+                ".navbar > ul > li:not(.dropdown) a"
+            );
+
+            navLinks.forEach(function(link){
+
+                link.addEventListener("click", function(){
+
+                    if(window.innerWidth <= 1050){
+
+                        navbar.classList.remove("active");
+
+                        menuBtn.classList.remove("active");
+
+                        menuBtn.setAttribute("aria-expanded", "false");
+
+                    }
+
+                });
+
+            });
+
+
+            /*
+            ==========================================
+            STICKY HEADER SCROLL EFFECT
+            ==========================================
+            */
+
+            window.addEventListener("scroll", function(){
+
+                if(window.scrollY > 30){
+
+                    mainHeader.classList.add("scrolled");
+
+                }else{
+
+                    mainHeader.classList.remove("scrolled");
+
+                }
+
+            });
+
+
+            /*
+            ==========================================
+            RESET MOBILE MENU ON RESIZE
+            ==========================================
+            */
+
+            window.addEventListener("resize", function(){
+
+                if(window.innerWidth > 1050){
+
+                    navbar.classList.remove("active");
+
+                    menuBtn.classList.remove("active");
+
+                    menuBtn.setAttribute("aria-expanded", "false");
+
+                }
+
+            });
+
+        });
+
+        // SCROLL BUTTON
+        let calcScrollValue = () => {
+            let scrollProgress = document.getElementById("progress");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round((pos * 100)/calcHeight);
+
+            if (pos > 100) {
+                scrollProgress.style.display = "grid";
+            } else {
+                scrollProgress.style.display = "none";
+            }
+
+            scrollProgress.onclick = () => {
+                document.documentElement.scrollTop = 0;
+            };
+
+            scrollProgress.style.background =
+                `conic-gradient(#0B2C6B ${scrollValue}%, white ${scrollValue}%)`;
+        };
+
+        window.addEventListener("scroll", calcScrollValue);
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const yearElement = document.getElementById("currentYear");
+
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+        });
+    </script>
+</body>
+</html>
